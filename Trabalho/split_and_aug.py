@@ -8,7 +8,7 @@ from PIL import Image
 aug = transforms.Compose([
     transforms.Resize((300, 300), interpolation=transforms.InterpolationMode.BILINEAR,
                       max_size=None, antialias="True"),
-    transforms.RandomAffine(degrees=180, translate=(0.05, 0.10), scale=(0.9, 1.5), shear=(-2, 2),
+    transforms.RandomAffine(degrees=360, translate=(0.05, 0.2), scale=(0.7, 1.5), shear=(-2, 2),
                             interpolation=transforms.InterpolationMode.BILINEAR,
                             fill=0),
     transforms.CenterCrop(250),
@@ -35,7 +35,7 @@ i = 0
 for img in trainset:
     img_class = img.split("\\")[-1].split("_")[0]
     img = Image.open(img)
-    for j in range(50):
+    for j in range(30):
         aug_img = aug(img)
         aug_img.save("Trabalho\\Dataset\\Compiled\\Classification\\Train\\" +
                      img_class + "_" + "{:0>5}".format(str(i)) + ".jpg")
