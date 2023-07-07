@@ -2,8 +2,6 @@ import os
 import random
 import cv2
 
-random.seed(1234)
-
 
 def readAndResizeImage(oldPath, newPath):
     img = cv2.imread(oldPath)

@@ -11,7 +11,6 @@ def readAndSave(oldPath, newPath):
     cv2.imwrite(newPath, img)
 
 
-random.seed(1234)
 img_list = []
 ids = set()
 with os.scandir("Trabalho/Dataset/Compiled/Classification/Test") as subFolders:
