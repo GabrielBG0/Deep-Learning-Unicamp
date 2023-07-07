@@ -1,5 +1,6 @@
 figures-datasets/*
 *.png
-*pth
+*.pth
+*.zip
 */images
 Trabalho/Dataset/*
